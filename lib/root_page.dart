@@ -19,7 +19,7 @@ class RootPage extends StatefulWidget {
 enum AuthStatus {
   notSignedIn,
   signedIn,
-  admin,
+  municipal,
 }
 
 class _RootPageState extends State<RootPage> {
@@ -30,10 +30,10 @@ class _RootPageState extends State<RootPage> {
         print(email);
         setState(() {
           if (userId != null) {
-            if (email == 'HHYQCalVObTMvVLRDmDTyz3zawu1') {
-              authStatus = AuthStatus.signedIn;
+            if (email == '1xIVAImkgDPY2KIkfhPJ3kNxbNw2') {
+              authStatus = AuthStatus.municipal;
             } else {
-              authStatus = AuthStatus.admin;
+              authStatus = AuthStatus.signedIn;
             }
           } else {
             authStatus = AuthStatus.notSignedIn;
@@ -48,41 +48,42 @@ class _RootPageState extends State<RootPage> {
       widget.auth.currentUser().then((email) {
         print(email);
         setState(() {
-          email == 'HHYQCalVObTMvVLRDmDTyz3zawu1'
-              ? authStatus = AuthStatus.signedIn
-              : authStatus = AuthStatus.admin;
+         authStatus = email == '1xIVAImkgDPY2KIkfhPJ3kNxbNw2'
+              ?  AuthStatus.municipal
+              :AuthStatus.signedIn;
         });
       });
     } else {
       setState(() {
         authStatus = AuthStatus.notSignedIn;
       });
-      
     }
-   
   }
 
   @override
   Widget build(BuildContext context) {
     switch (authStatus) {
       case AuthStatus.notSignedIn:
-        return new LoginPage(
-          title: ' Login',
-          auth: widget.auth,
-          type: widget.st,
-          onSignIn: () => _updateAuthStatus(AuthStatus.signedIn),
-        );
+        {
+          return new LoginPage(
+            title: ' Login',
+            auth: widget.auth,
+            type: widget.st,
+            onSignIn: () => _updateAuthStatus(AuthStatus.signedIn),
+          );
+        }
       case AuthStatus.signedIn:
         {
           return new EntryPage(
               selectedIndex: 0,
               auth: widget.auth,
-              onSignOut: () => _updateAuthStatus(AuthStatus.notSignedIn));
+              onSignOut: () => _updateAuthStatus(AuthStatus.notSignedIn),
+              );
         }
-      case AuthStatus.admin:
+      case AuthStatus.municipal:
         {
-          return Munci(
-            auth: widget.auth,
+          return new Munci(
+              auth: widget.auth,
               onSignOut: () => _updateAuthStatus(AuthStatus.notSignedIn));
         }
     }

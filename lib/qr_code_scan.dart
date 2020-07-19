@@ -63,7 +63,7 @@ class _ScannerState extends State<Scanner> {
           context,
           MaterialPageRoute(
               builder: (context) => EntryPage(
-                    selectedIndex: 2,
+                    selectedIndex: 1,
                   )));
     } else {
       print("home");

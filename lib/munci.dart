@@ -25,7 +25,7 @@ class _HelpToUser extends State<Munci> {
           title: Text('munci'),
           automaticallyImplyLeading: false,
           actions: <Widget>[
-            FloatingActionButton(
+            RaisedButton(
                 child:new Text('signout'),
                 onPressed: () {
                   _signOut();

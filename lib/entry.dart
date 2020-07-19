@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:tech_bin/wallet.dart';
+import 'chart.dart';
 import 'google_map.dart';
 import 'login_page.dart';
 import 'about_us.dart';
@@ -46,12 +46,6 @@ class _EntryPageState extends State<EntryPage> {
       new HomePage(),
       new Chart(
         collection: randomNumber,
-      ),
-      Center(
-        child: Text('Wallet'),
-      ),
-      Center(
-        child: Text('Setting'),
       ),
     ];
     return Scaffold(
@@ -176,16 +170,7 @@ class _EntryPageState extends State<EntryPage> {
           title: Text('Chart'),
           backgroundColor: Colors.blue,
         ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.account_balance_wallet),
-          title: Text('Wallet'),
-          backgroundColor: Colors.blue,
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.settings),
-          title: Text('Settings'),
-          backgroundColor: Colors.blue,
-        ),
+       
       ],
       onTap: (index) {
         setState(() {
