@@ -6,8 +6,7 @@ import 'package:barcode_scan/barcode_scan.dart';
 import 'package:tech_bin/entry.dart';
 import 'package:tech_bin/home_page.dart';
 import 'package:tech_bin/loader.dart';
-import 'package:tech_bin/wallet.dart';
-
+import 'package:tech_bin/chart.dart';
 int randomNumber;
 
 class Scanner extends StatefulWidget {
