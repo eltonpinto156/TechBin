@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import 'auth.dart';
@@ -87,13 +89,10 @@ class _LoginPageState extends State<LoginPage> {
           Alert(context: context, title: msg, desc: _authHint).show();
           print(e);
         }
-      }
-      else{
-        loading = false;
-        Alert(
-                context: context,
-                title: 'Login Failed',
-                desc: 'Invaild User')
+      } else {
+       
+        loading = false; 
+        Alert(context: context, title: 'Login Failed', desc: 'Invaild User')
             .show();
       }
     } else {
@@ -126,7 +125,11 @@ class _LoginPageState extends State<LoginPage> {
           print(e);
         }
       } else {
-        loading = false;
+       
+          
+           loading = false;
+
+       
         Alert(
                 context: context,
                 title: 'Login Failed',

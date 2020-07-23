@@ -2,20 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tech_bin/primary_button.dart';
 
-
-
-
-
-class Welcome extends StatefulWidget{
- Welcome({Key key}): super(key: key);
+class Welcome extends StatefulWidget {
+  Welcome({Key key}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() => new _Welcomes();
-
 }
-class _Welcomes extends State<Welcome>{
 
-void initState() {
+class _Welcomes extends State<Welcome> {
+  void initState() {
     super.initState();
     navigateToLastPage();
   }
@@ -28,22 +23,17 @@ void initState() {
     }
   }
 
-  
   Widget build(BuildContext context) {
-    
-    return  new Scaffold(
-      
-      body: Center(
-        child: Container(
-        constraints: BoxConstraints.expand(),
-            decoration:  BoxDecoration(
-            
-      image:  DecorationImage(
-        image:  AssetImage("lib/image/welcome.jpg"),
-        fit: BoxFit.fill
-      ),
-    ),
-            child: new Column(
+    return new Scaffold(
+        body: Center(
+            child: Container(
+                constraints: BoxConstraints.expand(),
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("lib/image/welcome.jpg"),
+                      fit: BoxFit.fill),
+                ),
+                child: new Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
                       new PrimaryButton(
@@ -51,12 +41,7 @@ void initState() {
                           height: 50.0,
                           onPressed: () {
                             Navigator.of(context).pushNamed('/RootPage');
-                          }
-                      ),
-                    ]
-            )
-        )
-      )
-    );
+                          }),
+                    ]))));
   }
 }

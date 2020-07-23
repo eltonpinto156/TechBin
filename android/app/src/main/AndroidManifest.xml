@@ -13,7 +13,7 @@
 
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="tech_bin"
+        android:label="Fill Me"
         android:icon="@mipmap/ic_launcher">
 
         <meta-data 
