@@ -3,10 +3,10 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:barcode_scan/barcode_scan.dart';
-import 'package:tech_bin/entry.dart';
-import 'package:tech_bin/home_page.dart';
-import 'package:tech_bin/loader.dart';
-import 'package:tech_bin/chart.dart';
+import 'package:tech_bin/widgets/entry.dart';
+import 'package:tech_bin/widgets/loader.dart';
+import 'package:lottie/lottie.dart';
+
 int randomNumber;
 
 class Scanner extends StatefulWidget {
@@ -52,7 +52,7 @@ class _ScannerState extends State<Scanner> {
   }
 
   startTime() async {
-    var duration = new Duration(seconds: 3);
+    var duration = new Duration(seconds: 5);
     return new Timer(duration, route);
   }
 
@@ -78,6 +78,7 @@ class _ScannerState extends State<Scanner> {
     }
   }
 
+  // ignore: missing_return
   Widget build(BuildContext context) {
     switch (loader) {
       case true:
@@ -87,9 +88,27 @@ class _ScannerState extends State<Scanner> {
         return Scaffold(
           body: Center(
             child: succes == true
-                ? Text(
-                    "scan Successfull!!!!!!!!",
-                    style: TextStyle(fontSize: 20),
+                ? Center(
+                    child: Container(
+                      height: 300,
+                      width: 300,
+                      child: Column(
+                        children: [
+                          Lottie.asset('assets/animations/weight.json'),
+                          Padding(
+                            padding: const EdgeInsets.all(18.0),
+                            child: Text(
+                              'Estimating the Weight',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 20
+                              ),
+                            ),
+                          ),
+                        ],
+                        
+                      ),
+                    ),
                   )
                 : Text(
                     "scan unSuccessfull!!!!!!!!$result",
