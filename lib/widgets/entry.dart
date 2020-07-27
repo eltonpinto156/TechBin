@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:tech_bin/widgets/rewards.dart';
 import 'chart.dart';
 import 'google_map.dart';
-import 'login_page.dart';
-import 'about_us.dart';
-import 'auth.dart';
-import 'help.dart';
-import 'home_page.dart';
+import '../authentication/login_page.dart';
+import '../views/about_us.dart';
+import '../authentication/auth.dart';
+import '../views/help.dart';
+import '../views/home_page.dart';
 import 'qr_code_scan.dart';
 
+// ignore: must_be_immutable
 class EntryPage extends StatefulWidget {
   EntryPage({this.selectedIndex, this.auth,this.onSignOut});
    int selectedIndex;
@@ -164,12 +166,12 @@ class _EntryPageState extends State<EntryPage> {
                       ),
                     ]),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => Settings(),
-                        ),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) => Settings(),
+                      //   ),
+                      // );
                     }),
                 ListTile(
                     title: new Row(children: [
@@ -190,12 +192,12 @@ class _EntryPageState extends State<EntryPage> {
                       ),
                     ]),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => Settings(),
-                        ),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) => Settings(),
+                      //   ),
+                      // );
                     }),
                 ListTile(
                     title: new Row(children: [
@@ -266,12 +268,12 @@ class _EntryPageState extends State<EntryPage> {
                       ),
                     ]),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => Settings(),
-                        ),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) => Settings(),
+                      //   ),
+                      // );
                     }),
                 ListTile(
                     title: new Row(children: [
@@ -292,12 +294,12 @@ class _EntryPageState extends State<EntryPage> {
                       ),
                     ]),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => Settings(),
-                        ),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) => Settings(),
+                      //   ),
+                      // );
                     }),
                 ListTile(
                   title: new Row(children: [
@@ -331,10 +333,26 @@ class _EntryPageState extends State<EntryPage> {
                     ),
                   ),
                 ),
-              ],
-            ),
+             
+           
+                 ListTile(
+                title: new Row(children: [
+                  Icon(
+                    Icons.attach_money
+                  ),
+                  Text('Rewards'),
+                ]),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Rewards()),
+                  );
+                }),
+                
+              ]
           ),
         ),
+      ),
       ),
        floatingActionButton: FloatingActionButton.extended(
             icon: Icon(Icons.camera_alt),

@@ -21,7 +21,11 @@ dependencies:
   flutter_polyline_points: ^0.2.2
   #qr code scanning
   barcode_scan: ^3.0.1
- 
+
+  # animations
+  lottie: ^0.4.1
+
+
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.3
 
@@ -41,17 +45,23 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - lib/image/images.jpeg
-    - lib/image/g.png
-    - lib/image/sigin_page.jpeg
-    - lib/image/welcome.jpg
-    - lib/image/ranju.jpeg
-    - lib/image/sumanth.jpg
-    - lib/image/anusha.jpg
-    - lib/image/elton.jpg
-    - lib/image/prashanth.jpg
-    - lib/image/shravya.jpg
-    - lib/image/logo.jpg
+    - assets/image/ranju.jpeg
+    - assets/image/sumanth.jpg
+    - assets/image/anusha.jpg
+    - assets/image/elton.jpg
+    - assets/image/prashanth.jpg
+    - assets/image/shravya.jpg
+    - assets/image/logo.jpg
+    - assets/image/images.jpeg
+    - assets/image/google_logo.png
+    - assets/image/sigin_page.jpeg
+    - assets/image/welcome.jpg
+    - assets/animations/qr-scan.json
+    - assets/animations/weight.json
+    - assets/animations/rewards.json
+
+
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

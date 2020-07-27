@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'entry.dart';
+import '../widgets/entry.dart';
 import 'login_page.dart';
-import 'munci.dart';
+import '../muncipal/munci.dart';
 import 'auth.dart';
 
 AuthStatus authStatus = AuthStatus.notSignedIn;
@@ -61,6 +61,7 @@ class _RootPageState extends State<RootPage> {
   }
 
   @override
+  // ignore: missing_return
   Widget build(BuildContext context) {
     switch (authStatus) {
       case AuthStatus.notSignedIn:
