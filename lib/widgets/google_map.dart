@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:geolocator/geolocator.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:tech_bin/loader.dart';
+import 'package:tech_bin/widgets/loader.dart';
 
 class GoogleMaps extends StatefulWidget {
   @override

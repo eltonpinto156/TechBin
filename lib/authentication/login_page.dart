@@ -1,10 +1,10 @@
-import 'dart:async';
+// import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import 'auth.dart';
-import 'loader.dart';
-import 'primary_button.dart';
+import '../widgets/loader.dart';
+import '../widgets/primary_button.dart';
 
 bool googleSignIn = false;
 
