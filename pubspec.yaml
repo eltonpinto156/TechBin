@@ -17,7 +17,7 @@ dependencies:
   webview_flutter: ^0.3.22+1
   # location
   google_maps_flutter: ^0.5.28+1
-  geolocator: ^5.3.2+2 
+  geolocator: ^5.3.2+2
   flutter_polyline_points: ^0.2.2
   #qr code scanning
   barcode_scan: ^3.0.1
@@ -25,6 +25,8 @@ dependencies:
   # animations
   lottie: ^0.4.1
 
+  #scratch card
+  scratcher: "^1.3.0"
 
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.3
@@ -45,6 +47,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - assets/image/images.jpeg
     - assets/image/ranju.jpeg
     - assets/image/sumanth.jpg
     - assets/image/anusha.jpg
@@ -52,10 +55,10 @@ flutter:
     - assets/image/prashanth.jpg
     - assets/image/shravya.jpg
     - assets/image/logo.jpg
-    - assets/image/images.jpeg
     - assets/image/google_logo.png
     - assets/image/sigin_page.jpeg
     - assets/image/welcome.jpg
+    - assets/image/scratch.jpg
     - assets/animations/qr-scan.json
     - assets/animations/weight.json
     - assets/animations/rewards.json

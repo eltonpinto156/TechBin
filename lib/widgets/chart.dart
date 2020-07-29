@@ -35,18 +35,25 @@ class ChartState extends State<Chart> {
             ),
           ),
           SizedBox(
-            height: 40,
+            height: 250,
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              'Congratulations !!\nYou have earned a reward',
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(38.0),
+          Container(
+            alignment: Alignment.center,
             child: FlatButton(
+              padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+              shape: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(35),
+                borderSide: BorderSide.none,
+              ),
+              color: Colors.blue,
+              child: Text(
+                "You\'ve won a Reward!!",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                ),
+              ),
               onPressed: () => {
                 Navigator.push(
                   context,
@@ -55,16 +62,8 @@ class ChartState extends State<Chart> {
                   ),
                 )
               },
-              child: Icon(
-                Icons.arrow_forward_ios,
-                size: 60,
-              ),
             ),
-          ),
-          Text(
-            'Tap here to see the reward !! ',
-            textAlign: TextAlign.center,
-          ),
+          )
         ],
       ),
     );
