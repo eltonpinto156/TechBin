@@ -123,7 +123,7 @@ class _Information extends State<AbooutUs> {
                             decoration: BoxDecoration(
                               image: new DecorationImage(
                                 image:
-                                    new AssetImage("assets/image/ranju.jpeg"),
+                                    new AssetImage("assets/image/amogh.jpeg"),
                                 fit: BoxFit.fill,
                               ),
                               shape: BoxShape.circle,
