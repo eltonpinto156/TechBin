@@ -1,23 +1,22 @@
 import 'package:flutter/material.dart';
 
-
-class AbooutUs extends StatefulWidget{
-
+class AbooutUs extends StatefulWidget {
   @override
-  _Information createState()=>new  _Information();
-  }
-  
-  class _Information extends State<AbooutUs>{
-    
-    Widget build(BuildContext context){
-      return Scaffold(
-        appBar: AppBar(title: Text('About Us'),),
-        body: Center(
+  _Information createState() => new _Information();
+}
+
+class _Information extends State<AbooutUs> {
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('About Us'),
+      ),
+      body: Center(
         child: Column(
           children: <Widget>[
             Container(
               padding: EdgeInsets.fromLTRB(0, 20.0, 0, 0),
-              height: 60,
+              height: 40,
               child: Center(
                 child: Text('Mission',
                     style: TextStyle(
@@ -28,8 +27,8 @@ class AbooutUs extends StatefulWidget{
               ),
             ),
             Container(
-              padding: EdgeInsets.all(15),
-              height: 230,
+              padding: EdgeInsets.all(10),
+              height: 210,
               child: Container(
                 padding: EdgeInsets.fromLTRB(30.0, 0, 12.0, 15.0),
                 child: Center(
@@ -80,7 +79,8 @@ class AbooutUs extends StatefulWidget{
                             width: 55,
                             decoration: BoxDecoration(
                               image: new DecorationImage(
-                                image: new AssetImage("lib/image/sumanth.jpg"),
+                                image:
+                                    new AssetImage("assets/image/sumanth.jpg"),
                                 fit: BoxFit.fill,
                               ),
                               shape: BoxShape.circle,
@@ -122,7 +122,8 @@ class AbooutUs extends StatefulWidget{
                             width: 55,
                             decoration: BoxDecoration(
                               image: new DecorationImage(
-                                image: new AssetImage("lib/image/ranju.jpeg"),
+                                image:
+                                    new AssetImage("assets/image/ranju.jpeg"),
                                 fit: BoxFit.fill,
                               ),
                               shape: BoxShape.circle,
@@ -164,8 +165,8 @@ class AbooutUs extends StatefulWidget{
                             width: 55,
                             decoration: BoxDecoration(
                               image: new DecorationImage(
-                                  image:
-                                      new AssetImage("lib/image/shravya.jpg"),
+                                  image: new AssetImage(
+                                      "assets/image/shravya.jpg"),
                                   fit: BoxFit.fill),
                               shape: BoxShape.circle,
                               boxShadow: <BoxShadow>[
@@ -206,7 +207,8 @@ class AbooutUs extends StatefulWidget{
                             width: 55,
                             decoration: BoxDecoration(
                               image: new DecorationImage(
-                                  image: new AssetImage("lib/image/elton.jpg"),
+                                  image:
+                                      new AssetImage("assets/image/elton.jpg"),
                                   fit: BoxFit.fill),
                               shape: BoxShape.circle,
                               boxShadow: <BoxShadow>[
@@ -252,7 +254,8 @@ class AbooutUs extends StatefulWidget{
                             width: 55,
                             decoration: BoxDecoration(
                               image: new DecorationImage(
-                                image: new AssetImage("lib/image/anusha.jpg"),
+                                image:
+                                    new AssetImage("assets/image/anusha.jpg"),
                                 fit: BoxFit.fill,
                               ),
                               shape: BoxShape.circle,
@@ -294,7 +297,8 @@ class AbooutUs extends StatefulWidget{
                             width: 55,
                             decoration: BoxDecoration(
                               image: new DecorationImage(
-                                image: new AssetImage("lib/image/ranju.jpeg"),
+                                image:
+                                    new AssetImage("assets/image/ranju.jpeg"),
                                 fit: BoxFit.fill,
                               ),
                               shape: BoxShape.circle,
@@ -336,8 +340,8 @@ class AbooutUs extends StatefulWidget{
                             width: 55,
                             decoration: BoxDecoration(
                               image: new DecorationImage(
-                                  image:
-                                      new AssetImage("lib/image/prashanth.jpg"),
+                                  image: new AssetImage(
+                                      "assets/image/prashanth.jpg"),
                                   fit: BoxFit.fill),
                               shape: BoxShape.circle,
                               boxShadow: <BoxShadow>[
@@ -378,7 +382,8 @@ class AbooutUs extends StatefulWidget{
                             width: 55,
                             decoration: BoxDecoration(
                               image: new DecorationImage(
-                                  image: new AssetImage("lib/image/ranju.jpeg"),
+                                  image:
+                                      new AssetImage("assets/image/ranju.jpeg"),
                                   fit: BoxFit.fill),
                               shape: BoxShape.circle,
                               boxShadow: <BoxShadow>[
@@ -419,6 +424,6 @@ class AbooutUs extends StatefulWidget{
           ],
         ),
       ),
-      );
-    }
+    );
+  }
 }

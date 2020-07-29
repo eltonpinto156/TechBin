@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:tech_bin/widgets/rewards.dart';
 import 'package:scratcher/scratcher.dart';
+import 'dart:math' show Random;
 
 class RewardAnimation extends StatefulWidget {
   @override
@@ -9,6 +10,8 @@ class RewardAnimation extends StatefulWidget {
 }
 
 class _RewardAnimationState extends State<RewardAnimation> {
+  var randomizer = new Random();
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -43,7 +46,7 @@ class _RewardAnimationState extends State<RewardAnimation> {
                         height: 300,
                         alignment: Alignment(0.0, 1.0),
                         child: Text(
-                          'You have earned\n${7}',
+                          'You have earned\n${randomizer.nextInt(25)}',
                           textAlign: TextAlign.center,
                           textScaleFactor: 2.0,
                         ),
