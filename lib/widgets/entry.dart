@@ -16,13 +16,13 @@ class EntryPage extends StatefulWidget {
    int selectedIndex;
   final BaseAuth auth;
   final VoidCallback onSignOut;
-  
+
   @override
   _EntryPageState createState() => new _EntryPageState();
 }
 
 class _EntryPageState extends State<EntryPage> {
-  
+
   @override
   Widget build(BuildContext context) {
 
@@ -301,6 +301,32 @@ class _EntryPageState extends State<EntryPage> {
                       //   ),
                       // );
                     }),
+                    ListTile(
+                      title: new Row(children: [
+                        Icon(
+                          Icons.bluetooth,
+                          color: Colors.green,
+                        ),
+                        Container(
+                          padding: EdgeInsets.fromLTRB(20, 10, 10, 10),
+                          child: Text(
+                            'Bluetooth',
+                            style: TextStyle(
+                              color: Colors.black54,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                            ),
+                          ),
+                        ),
+                      ]),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => FlutterBlueApp(),
+                          ),
+                        );
+                      }),
                 ListTile(
                   title: new Row(children: [
                     Icon(
@@ -333,8 +359,8 @@ class _EntryPageState extends State<EntryPage> {
                     ),
                   ),
                 ),
-             
-           
+
+
                  ListTile(
                 title: new Row(children: [
                   Icon(
@@ -348,7 +374,7 @@ class _EntryPageState extends State<EntryPage> {
                     MaterialPageRoute(builder: (context) => Rewards()),
                   );
                 }),
-                
+
               ]
           ),
         ),
@@ -381,7 +407,7 @@ class _EntryPageState extends State<EntryPage> {
           title: Text('Chart'),
           backgroundColor: Colors.blue,
         ),
-       
+
       ],
       onTap: (index) {
         setState(() {
